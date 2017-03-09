@@ -6,11 +6,14 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<entry key="target" type="xstring" value="left_eye_center_x"/>
-<config key="column_filter">
+<entry key="degree" type="xint" value="3"/>
+<entry key="targetColumn" type="xstring" value="left_eye_center_x"/>
+<entry key="maxViewRows" type="xint" value="10000"/>
+<entry key="missing_value_handling" type="xstring" value="ignore"/>
+<config key="column filter">
 <entry key="filter-type" type="xstring" value="STANDARD"/>
 <config key="included_names">
-<entry key="array-size" type="xint" value="83"/>
+<entry key="array-size" type="xint" value="89"/>
 <entry key="0" type="xstring" value="PCA dimension 0"/>
 <entry key="1" type="xstring" value="PCA dimension 1"/>
 <entry key="2" type="xstring" value="PCA dimension 2"/>
@@ -94,6 +97,12 @@
 <entry key="80" type="xstring" value="PCA dimension 80"/>
 <entry key="81" type="xstring" value="PCA dimension 81"/>
 <entry key="82" type="xstring" value="PCA dimension 82"/>
+<entry key="83" type="xstring" value="PCA dimension 83"/>
+<entry key="84" type="xstring" value="PCA dimension 84"/>
+<entry key="85" type="xstring" value="PCA dimension 85"/>
+<entry key="86" type="xstring" value="PCA dimension 86"/>
+<entry key="87" type="xstring" value="PCA dimension 87"/>
+<entry key="88" type="xstring" value="PCA dimension 88"/>
 </config>
 <config key="excluded_names">
 <entry key="array-size" type="xint" value="29"/>
@@ -135,25 +144,15 @@
 </config>
 <config key="datatype">
 <config key="typelist">
-<entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
-<entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
 <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
-<entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
-<entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
-<entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
 </config>
 </config>
 </config>
-<entry key="include_constant" type="xboolean" value="true"/>
-<entry key="offset_value" type="xdouble" value="0.0"/>
-<entry key="missing_value_handling" type="xstring" value="ignore"/>
-<entry key="scatter_plot_first_row" type="xint" value="1"/>
-<entry key="scatter_plot_row_count" type="xint" value="20000"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
-<entry key="factory" type="xstring" value="org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeFactory2"/>
-<entry key="node-name" type="xstring" value="Linear Regression Learner"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.mine.regression.polynomial.learner2.PolyRegLearnerNodeFactory2"/>
+<entry key="node-name" type="xstring" value="Polynomial Regression Learner"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
 <entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
@@ -163,7 +162,7 @@
 <entry key="node-feature-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
 <entry key="node-feature-version" type="xstring" value="3.2.1.v201608190927"/>
 <config key="factory_settings"/>
-<entry key="name" type="xstring" value="Linear Regression Learner"/>
+<entry key="name" type="xstring" value="Polynomial Regression Learner"/>
 <entry key="hasContent" type="xboolean" value="true"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
@@ -171,7 +170,7 @@
 <entry key="index" type="xint" value="1"/>
 <entry key="port_spec_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObjectSpec"/>
 <entry key="port_object_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObject"/>
-<entry key="port_object_summary" type="xstring" value="PMML document with version 4.2 and models: GeneralRegressionModel"/>
+<entry key="port_object_summary" type="xstring" value="PMML document with version 4.2 and models: RegressionModel"/>
 <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
 <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
 <entry key="port_dir_location" type="xstring" value="port_1"/>
@@ -180,12 +179,19 @@
 <entry key="index" type="xint" value="2"/>
 <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
 <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 84, Cols: 5"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 5639, Cols: 92"/>
 <entry key="port_dir_location" type="xstring" value="port_2"/>
+</config>
+<config key="port_3">
+<entry key="index" type="xint" value="3"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 268, Cols: 6"/>
+<entry key="port_dir_location" type="xstring" value="port_3"/>
 </config>
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="0a1b081f-32b9-469f-8f1b-f8679a6b211e"/>
+<entry key="file_store_id" type="xstring" value="e9e687d8-a450-4e64-a97a-b870622ed9b8"/>
 </config>
 </config>

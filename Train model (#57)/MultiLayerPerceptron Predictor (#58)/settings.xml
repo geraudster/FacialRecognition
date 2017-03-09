@@ -6,47 +6,31 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<config key="reference_Internals">
+<config key="prediction column name_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<config key="reference">
-<entry key="useRowID" type="xboolean" value="false"/>
-<entry key="columnName" type="xstring" value="left_eye_center_x"/>
-</config>
-<config key="predicted_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="true"/>
-</config>
-<config key="predicted">
-<entry key="useRowID" type="xboolean" value="false"/>
-<entry key="columnName" type="xstring" value="Prediction (left_eye_center_x)"/>
-</config>
-<config key="override default output name_Internals">
+<entry key="prediction column name" type="xstring" value="Prediction ()"/>
+<config key="change prediction_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<entry key="override default output name" type="xboolean" value="false"/>
-<config key="output column_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="false"/>
-</config>
-<entry key="output column" type="xstring" value="Prediction (left_eye_center_x)"/>
-<config key="name prefix for flowvars_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="false"/>
-</config>
-<entry key="name prefix for flowvars" type="xstring" value=""/>
-<config key="generate flow variables_Internals">
+<entry key="change prediction" type="xboolean" value="false"/>
+<config key="append probabilities_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<entry key="generate flow variables" type="xboolean" value="false"/>
+<entry key="append probabilities" type="xboolean" value="true"/>
+<config key="class probability suffix_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="class probability suffix" type="xstring" value=""/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
-<entry key="factory" type="xstring" value="org.knime.base.node.mine.scorer.numeric.NumericScorerNodeFactory"/>
-<entry key="node-name" type="xstring" value="Numeric Scorer"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory"/>
+<entry key="node-name" type="xstring" value="MultiLayerPerceptron Predictor"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
 <entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
@@ -56,7 +40,7 @@
 <entry key="node-feature-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
 <entry key="node-feature-version" type="xstring" value="3.2.1.v201608190927"/>
 <config key="factory_settings"/>
-<entry key="name" type="xstring" value="Numeric Scorer"/>
+<entry key="name" type="xstring" value="MultiLayerPerceptron Predictor"/>
 <entry key="hasContent" type="xboolean" value="true"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
@@ -64,12 +48,12 @@
 <entry key="index" type="xint" value="1"/>
 <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
 <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 5, Cols: 1"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 448, Cols: 120"/>
 <entry key="port_dir_location" type="xstring" value="port_1"/>
 </config>
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="a6b636d3-ec38-4381-a1a6-80a379250ef1"/>
+<entry key="file_store_id" type="xstring" value="d470b73d-a640-4cc2-a9d7-ad5177508337"/>
 </config>
 </config>

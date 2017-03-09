@@ -6,47 +6,46 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<config key="reference_Internals">
+<config key="maxiter_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="maxiter" type="xint" value="200"/>
+<config key="hiddenlayer_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="hiddenlayer" type="xint" value="3"/>
+<config key="nrhiddenneurons_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="nrhiddenneurons" type="xint" value="50"/>
+<config key="classcol_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<config key="reference">
-<entry key="useRowID" type="xboolean" value="false"/>
-<entry key="columnName" type="xstring" value="left_eye_center_x"/>
-</config>
-<config key="predicted_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="true"/>
-</config>
-<config key="predicted">
-<entry key="useRowID" type="xboolean" value="false"/>
-<entry key="columnName" type="xstring" value="Prediction (left_eye_center_x)"/>
-</config>
-<config key="override default output name_Internals">
+<entry key="classcol" type="xstring" value="left_eye_center_x"/>
+<config key="ignoremv_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<entry key="override default output name" type="xboolean" value="false"/>
-<config key="output column_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="false"/>
-</config>
-<entry key="output column" type="xstring" value="Prediction (left_eye_center_x)"/>
-<config key="name prefix for flowvars_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="false"/>
-</config>
-<entry key="name prefix for flowvars" type="xstring" value=""/>
-<config key="generate flow variables_Internals">
+<entry key="ignoremv" type="xboolean" value="true"/>
+<config key="useRandomSeed_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<entry key="generate flow variables" type="xboolean" value="false"/>
+<entry key="useRandomSeed" type="xboolean" value="true"/>
+<config key="randomSeed_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="randomSeed" type="xint" value="692759981"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
-<entry key="factory" type="xstring" value="org.knime.base.node.mine.scorer.numeric.NumericScorerNodeFactory"/>
-<entry key="node-name" type="xstring" value="Numeric Scorer"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.mine.neural.rprop.RPropNodeFactory2"/>
+<entry key="node-name" type="xstring" value="RProp MLP Learner"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
 <entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
@@ -56,20 +55,22 @@
 <entry key="node-feature-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
 <entry key="node-feature-version" type="xstring" value="3.2.1.v201608190927"/>
 <config key="factory_settings"/>
-<entry key="name" type="xstring" value="Numeric Scorer"/>
+<entry key="name" type="xstring" value="RProp MLP Learner"/>
 <entry key="hasContent" type="xboolean" value="true"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
 <config key="port_1">
 <entry key="index" type="xint" value="1"/>
-<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 5, Cols: 1"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObjectSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObject"/>
+<entry key="port_object_summary" type="xstring" value="PMML document with version 4.2 and models: NeuralNetwork"/>
+<entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+<entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
 <entry key="port_dir_location" type="xstring" value="port_1"/>
 </config>
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="a6b636d3-ec38-4381-a1a6-80a379250ef1"/>
+<entry key="file_store_id" type="xstring" value="33dbd6ae-8502-4c08-9ed9-6dd9519a742a"/>
 </config>
 </config>

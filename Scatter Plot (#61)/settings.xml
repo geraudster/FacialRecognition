@@ -6,17 +6,21 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<entry key="method" type="xstring" value="Relative"/>
-<entry key="samplingMethod" type="xstring" value="Random"/>
-<entry key="fraction" type="xdouble" value="0.5"/>
-<entry key="count" type="xint" value="100"/>
-<entry key="random_seed" type="xstring" isnull="true" value=""/>
-<entry key="class_column" type="xstring" isnull="true" value=""/>
+<config key="end_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="end" type="xint" value="2500"/>
+<config key="max_nominal_values_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="max_nominal_values" type="xint" value="60"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
-<entry key="factory" type="xstring" value="org.knime.base.node.preproc.partition.PartitionNodeFactory"/>
-<entry key="node-name" type="xstring" value="Partitioning"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory"/>
+<entry key="node-name" type="xstring" value="Scatter Plot"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
 <entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
@@ -26,27 +30,12 @@
 <entry key="node-feature-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
 <entry key="node-feature-version" type="xstring" value="3.2.1.v201608190927"/>
 <config key="factory_settings"/>
-<entry key="name" type="xstring" value="Partitioning"/>
+<entry key="name" type="xstring" value="Scatter Plot"/>
 <entry key="hasContent" type="xboolean" value="true"/>
 <entry key="isInactive" type="xboolean" value="false"/>
-<config key="ports">
-<config key="port_1">
-<entry key="index" type="xint" value="1"/>
-<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 2819, Cols: 2305"/>
-<entry key="port_dir_location" type="xstring" value="port_1"/>
-</config>
-<config key="port_2">
-<entry key="index" type="xint" value="2"/>
-<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 2820, Cols: 2305"/>
-<entry key="port_dir_location" type="xstring" value="port_2"/>
-</config>
-</config>
+<config key="ports"/>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="3d07d740-72b9-4486-920b-0ff12dcc1d70"/>
+<entry key="file_store_id" type="xstring" value="8e7054e2-93a2-470f-af0c-aab1d5c383bf"/>
 </config>
 </config>
